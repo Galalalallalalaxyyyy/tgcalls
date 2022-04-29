@@ -47,7 +47,7 @@ VideoCapturerInterfaceImpl::VideoCapturerInterfaceImpl(
 	if (const auto source = DesktopCaptureSourceForKey(deviceId)) {
 		const auto data = DesktopCaptureSourceData{
 			/*.aspectSize = */{ 1280, 720 },
-			/*.fps = */24.,
+			/*.fps = */60.,
 			/*.captureMouse = */(deviceId != "desktop_capturer_pipewire"),
 		};
 		_desktopCapturer = std::make_unique<DesktopCaptureSourceHelper>(
